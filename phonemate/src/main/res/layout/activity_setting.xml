@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:id="@+id/mLayoutSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blue_trans_77"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_view" />
+
+        <include layout="@layout/include_titlemenu_view" />
+
+        <ScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_trans">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/include_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/comm_margin" />
+                <!--初始设置-->
+                <LinearLayout
+                    android:id="@+id/layout_add_init_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="初始设置"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+                <LinearLayout
+                    android:id="@+id/layout_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="使用说明"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+                <!--是否开启悬浮助手-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="是否开启悬浮助手"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_show_flaot"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                     android:visibility="gone"
+                    android:id="@+id/layout_advice"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="反馈意见"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+                <include
+                    layout="@layout/include_line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/comm_margin" />
+
+                <LinearLayout
+                    android:id="@+id/layout_about_us"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="关于软件"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+
+                <LinearLayout
+                    android:id="@+id/layout_market"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="市场评分"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+                <LinearLayout
+                    android:id="@+id/layout_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="检查更新"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <TextView
+                        android:id="@+id/tv_has_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:gravity="center"
+                        android:text="已是最新版本"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_ignore" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="0"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/icon_detail" />
+                </LinearLayout>
+
+
+                <include layout="@layout/include_line_view" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

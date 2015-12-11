@@ -1,0 +1,35 @@
+<resources>
+
+    <style name="Pannel_Style_Dialog" parent="AlertDialog.AppCompat">
+        <item name="android:windowBackground">@color/color_trans</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--模糊-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="Select_PannelEntity_Dialog" parent="AlertDialog.AppCompat">
+        <item name="android:windowBackground">@color/color_white_trans_99</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <style name="Select_Progress_Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/color_trans</item>
+        <item name="android:background">@color/color_trans</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+</resources>

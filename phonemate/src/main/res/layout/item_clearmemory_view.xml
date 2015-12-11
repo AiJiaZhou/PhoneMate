@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayoutBg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_trans"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/color_trans"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mTvPercent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="80%"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dimen_text_ignore_small" />
+
+        <com.phonemate.widget.CircleProgressView
+            android:id="@+id/circleprogress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:progress="100"
+            app:progressTotal="100" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/mTvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_ignore_small" />
+</LinearLayout>
+

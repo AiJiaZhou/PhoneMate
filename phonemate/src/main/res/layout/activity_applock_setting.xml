@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:id="@+id/mLayoutSetting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_blue_trans_77"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_title_view" />
+
+        <include layout="@layout/include_titlemenu_view" />
+
+        <ScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_trans">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/comm_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="@dimen/comm_margin"
+                        android:background="@color/color_line" />
+
+                    <LinearLayout
+                        android:id="@+id/mLayouIsOpen"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/selector_white_press"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/comm_padding"
+                        android:paddingRight="@dimen/comm_padding">
+
+                        <TextView
+                            android:id="@+id/mTvMenuName"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="应用锁"
+                            android:textColor="@color/color_text_gray"
+                            android:textSize="@dimen/dimen_text_content"
+                            android:textStyle="bold" />
+
+                        <CheckBox
+                            android:id="@+id/mCBMenuStatus"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/selector_switch_bg"
+                            android:button="@null"
+                            android:checked="true" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_line" />
+
+                    <LinearLayout
+                        android:id="@+id/mLayouSettingPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/selector_white_press"
+                        android:descendantFocusability="blocksDescendants"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/comm_padding"
+                        android:paddingRight="@dimen/comm_padding">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="密码设置"
+                            android:textColor="@color/color_text_gray"
+                            android:textSize="@dimen/dimen_text_content"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@mipmap/icon_detail"
+                            android:button="@null" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/color_line" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/comm_padding"
+                    android:text="请选择要加锁的应用"
+                    android:textColor="@color/color_text_title"
+                    android:textSize="@dimen/dimen_text_content" />
+
+                <com.phonemate.widget.ListViewForScrollView
+                    android:id="@+id/mListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:divider="@color/color_trans"
+                    android:dividerHeight="@dimen/comm_padding"
+                    android:listSelector="@color/color_trans" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mLayoutGesture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33475f"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/icon_app" />
+
+        <TextView
+            android:id="@+id/mTvPasswordTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/comm_margin"
+            android:gravity="center"
+            android:text="请输入密码"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/dimen_text_content" />
+
+        <com.phonemate.widget.GestureLockView
+            android:id="@+id/mGesture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</FrameLayout>

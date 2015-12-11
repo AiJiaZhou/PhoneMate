@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主面板 布局-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blue_trans_77">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:id="@+id/mLayoutPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_panel_control_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/comm_padding">
+        <GridView
+            android:id="@+id/mGridView"
+            android:listSelector="@color/color_trans"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:overScrollMode="never" />
+        </LinearLayout>
+</FrameLayout>

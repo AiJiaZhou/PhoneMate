@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:background="@color/color_blue_trans_77"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/include_title_view" />
+
+            <include layout="@layout/include_titlemenu_view" />
+            <LinearLayout
+                android:padding="@dimen/comm_padding"
+                android:background="@drawable/shape_transbg_corners_white_stroke"
+                android:id="@+id/layout_floatview_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:layout_margin="30dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:textColor="@color/color_white"
+                    android:id="@+id/tv_float_view_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_setting_floatview_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:textColor="@color/color_white"
+                    android:id="@+id/tv_float_view_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/init_setting_floatview_detail"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/comm_padding"
+                android:background="@drawable/shape_transbg_corners_white_stroke"
+                android:id="@+id/layout_selfstart_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:textColor="@color/color_white"
+                    android:id="@+id/tv_self_start_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/init_setting_self_start_title"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:textColor="@color/color_white"
+                    android:id="@+id/tv_self_start_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/init_setting_self_start_detail"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

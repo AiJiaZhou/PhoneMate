@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="0dp"
+    android:background="@drawable/selector_homemenu_item_bg"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/mIvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="@dimen/dimen_text_content"
+        android:textColor="@drawable/selector_homemenu_item_textcolor"
+        android:layout_marginTop="@dimen/comm_margin"
+        android:id="@+id/mTvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

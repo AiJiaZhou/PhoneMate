@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MemoryCircleView">
+        <attr name="ringcolor" format="color" />
+        <attr name="srokeringwidth" format="dimension" />
+        <attr name="outringcolor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MemoryClearView">
+        <attr name="outcircle_color" format="color" />
+        <attr name="outcircle_width" format="dimension" />
+        <attr name="outcircle_start_angle" format="integer" />
+        <attr name="outcircle_end_angle" format="integer" />
+        <attr name="outcircle_radius" format="dimension" />
+
+        <attr name="innercircle_color" format="color" />
+        <attr name="innercircle_width" format="dimension" />
+        <attr name="innercircle_start_angle" format="integer" />
+        <attr name="innercircle_end_angle" format="integer" />
+        <attr name="innercircle_radius" format="dimension" />
+
+        <attr name="innerprogress_circle_color" format="color" />
+        <attr name="innerprogress_circle_width" format="dimension" />
+        <attr name="innerprogress_circle_start_angle" format="integer" />
+        <attr name="innerprogress_circle_end_angle" format="integer" />
+        <attr name="innerprogress_circle_radius" format="dimension" />
+
+        <attr name="inner_2_outdiatance" format="dimension" />
+
+        <attr name="indexpointer_color" format="color" />
+        <attr name="indexpointer_circle_color" format="color" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="progressBgColor" format="color"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressTotal" format="integer"/>
+        <attr name="progress" format="integer"/>
+    </declare-styleable>
+</resources>

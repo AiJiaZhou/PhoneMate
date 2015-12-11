@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Application/Application.iml" filepath="$PROJECT_DIR$/Application/Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImageLoader/ImageLoader.iml" filepath="$PROJECT_DIR$/ImageLoader/ImageLoader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhoneMate.iml" filepath="$PROJECT_DIR$/PhoneMate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RuntimePermissions/RuntimePermissions.iml" filepath="$PROJECT_DIR$/RuntimePermissions/RuntimePermissions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fast/fast.iml" filepath="$PROJECT_DIR$/fast/fast.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestureBuilder/gestureBuilder.iml" filepath="$PROJECT_DIR$/gestureBuilder/gestureBuilder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phonemate/phonemate.iml" filepath="$PROJECT_DIR$/phonemate/phonemate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+    </modules>
+  </component>
+</project>

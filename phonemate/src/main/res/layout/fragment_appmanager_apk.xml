@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_blue_trans_77">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/mListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="@color/color_trans"
+            android:dividerHeight="@dimen/comm_padding"
+            android:listSelector="@color/color_trans" />
+
+        <LinearLayout
+            android:background="@drawable/shape_transbg_corners_orangestroke"
+            android:padding="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mTvAll"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_transbg_corners_orangestroke"
+                android:gravity="center"
+                android:text="全选"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/dimen_text_content" />
+
+            <TextView
+                android:id="@+id/mTvDelete"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_transbg_corners_orangestroke"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/dimen_text_content" />
+
+            <TextView
+                android:id="@+id/mTvInstall"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_transbg_corners_orangestroke"
+                android:gravity="center"
+                android:text="安装"
+                android:textColor="@color/color_orange"
+                android:textSize="@dimen/dimen_text_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progress_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/progress_layout_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                style="@style/Base.Widget.AppCompat.ProgressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:id="@+id/progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载中"
+                android:textColor="#EFEFEF"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

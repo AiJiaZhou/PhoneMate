@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_blue">#139ADC</color>
+    <color name="color_blue_trans_AA">#AA139ADC</color>
+
+    <color name="color_blue_trans_77">#77139ADC</color>
+    <color name="color_app_lock_bg">#33475f</color>
+    <color name="color_green">#43A413</color>
+    <color name="color_light_green">#50CAA5</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_trans">#00000000</color>
+    <color name="color_line">#DEDEDE</color>
+    <color name="color_eee">#EEEEEE</color>
+    <color name="color_orange">#FF5277</color>
+    <color name="color_white_trans_22">#22FFFFFF</color>
+    <color name="color_white_trans_99">#99FFFFFF</color>
+    <color name="color_white_trans_80">#80FFFFFF</color>
+    <color name="color_white_press">#DFDFDF</color>
+    <color name="color_purplr">#673AB7</color>
+    <color name="color_text_homemenu">#33475f</color>
+    <color name="color_text_black">#212121</color>
+    <color name="color_text_title">#555555</color>
+    <color name="color_text_gray">#727272</color>
+    <color name="color_black_22">#22000000</color>
+</resources>

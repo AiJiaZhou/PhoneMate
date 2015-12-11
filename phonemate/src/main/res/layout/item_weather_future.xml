@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_trans"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:id="@+id/mTvWeek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="星期一"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_content" />
+
+    <ImageView
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:id="@+id/mIvWeather"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/weather_sunny" />
+
+    <TextView
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:id="@+id/mTvWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="晴"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_ignore_small" />
+
+    <TextView
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:id="@+id/mTvTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="18/19"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_ignore_small" />
+
+    <TextView
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:id="@+id/mTvTWind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="东风-4级"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/dimen_text_ignore_small" />
+
+</LinearLayout>
