@@ -1,4 +1,4 @@
-package com.phonemate.activity;
+package com.phonemate.activity.applock;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -23,7 +23,7 @@ import com.rxx.fast.view.ViewInject;
  * 修改时间：15/12/1 10:28
  * 修改备注：
  */
-public class AppLockActivity extends BaseActivity implements  GestureLockView.OnGestureFinishListener{
+public class AppGestureLockActivity extends BaseActivity implements  GestureLockView.OnGestureFinishListener{
 
     private String appName;
     private Drawable appDrawable;
