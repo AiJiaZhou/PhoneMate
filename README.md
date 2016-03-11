@@ -1,5 +1,4 @@
-应用介绍：
-PhoneMate，又称手机伴侣，为数亿Android手机提供最贴心的服务。
+应用介绍：PhoneMate，又称手机伴侣，为数亿Android手机提供最贴心的服务。
 
 1.悬浮助手，高大上快捷操作好助手，在Android上也能体验Assistive Touch功能啦。
 
@@ -10,6 +9,9 @@ PhoneMate，又称手机伴侣，为数亿Android手机提供最贴心的服务�
 4.内存清理，快准狠的内存杀手，手机用再久也不担心卡顿啦。
 
 5.新增抢红包插件，QQ，微信红包一个红包不落下。
+
+交流 QQ 群：171400283
+
 ![主页面：](http://git.oschina.net/uploads/images/2016/0310/160604_2f1dc69e_414444.png "悬浮菜单控制")
 ![软件管理页面](http://git.oschina.net/uploads/images/2016/0310/160617_9ebf3fba_414444.png "apk管理和app管理")
 ![应用锁设置界面](http://git.oschina.net/uploads/images/2016/0310/160629_c556a513_414444.png "需要加锁的应用管理")
