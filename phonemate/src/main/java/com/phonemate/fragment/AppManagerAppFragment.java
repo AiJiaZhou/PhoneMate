@@ -42,7 +42,6 @@ public class AppManagerAppFragment extends BaseFragment  implements AppManagerAp
 
     private AppManagerAppAdapter mAdapter;
 
-    private AppManagerAppEntityAsynctask mAsyncTask;
 
     private AppDetailDialog mDialog;
 
@@ -72,10 +71,10 @@ public class AppManagerAppFragment extends BaseFragment  implements AppManagerAp
 
     @Override
     public void loadAppFinish(List<AppManagerAppEntity> list) {
-        progress_bar_layout.setVisibility(View.GONE);
         mAppList.clear();
         mAppList.addAll(list);
         mAdapter.notifyDataSetChanged();
+        progress_bar_layout.setVisibility(View.GONE);
     }
 
     @Override

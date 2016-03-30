@@ -1,11 +1,11 @@
 package com.phonemate.model;
 
 import com.phonemate.R;
-import com.phonemate.activity.SettingActivity;
 import com.phonemate.activity.AppLockSettingActivity;
-import com.phonemate.activity.FloatViewSettingActivity;
-import com.phonemate.activity.PanelSettingActivity;
 import com.phonemate.activity.AppManagerActivity;
+import com.phonemate.activity.PanelSettingActivity;
+import com.phonemate.activity.QHBActivity;
+import com.phonemate.activity.SettingActivity;
 import com.phonemate.activity.WeatherDetailActivity;
 
 /**
@@ -19,12 +19,12 @@ import com.phonemate.activity.WeatherDetailActivity;
  */
 public class HomeMenuEntity {
     public static final int mMenuNum=6;
-    public static final String [] mMenuName={"天气详情","悬浮菜单","应用锁",
+    public static final String [] mMenuName={"天气详情","抢红包","应用锁",
             "面板管理","软件管理","关于"};
-    public static final int [] mMenuIcon={R.mipmap.icon_homemenu_weather,R.mipmap.icon_homemenu_floatview,
+    public static final int [] mMenuIcon={R.mipmap.icon_homemenu_weather,R.mipmap.icon_homemenu_hongbao,
             R.mipmap.icon_homemenu_applock, R.mipmap.icon_homemenu_floatmenu,
             R.mipmap.icon_homemenu_app,R.mipmap.icon_homemenu_about};
     public static final Class [] mMenuAction={
-            WeatherDetailActivity.class,FloatViewSettingActivity.class, AppLockSettingActivity.class,
+            WeatherDetailActivity.class,QHBActivity   .class, AppLockSettingActivity.class,
             PanelSettingActivity.class, AppManagerActivity.class,SettingActivity.class};
 }

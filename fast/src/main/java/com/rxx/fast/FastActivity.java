@@ -10,7 +10,7 @@ import com.rxx.fast.view.ViewUtils;
  * User: RanCQ
  * Date: 2015/10/9
  */
-public abstract class FastActivity extends Activity{
+public abstract class FastActivity extends Activity {
 
     @Override
     public void setContentView(int layoutResID) {

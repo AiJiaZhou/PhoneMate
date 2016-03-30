@@ -7,7 +7,7 @@
         android:id="@+id/mLayoutSetting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_blue_trans_77"
+        android:background="@color/color_gray_back"
         android:orientation="vertical">
 
         <include layout="@layout/include_title_view" />
@@ -45,7 +45,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:text="自动抢红包"
+                        android:text="后台抢红包"
                         android:textColor="@color/color_text_gray"
                         android:textSize="@dimen/dimen_text_content" />
 
@@ -58,164 +58,150 @@
                         android:checked="false" />
                 </LinearLayout>
 
-                <!--<include layout="@layout/include_line_view" />-->
-                <!-- 锁屏抢红包-->
+                <include layout="@layout/include_line_view" />
+
                 <LinearLayout
-                    android:visibility="gone"
-                    android:id="@+id/mLayoutLS"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/selector_white_press"
-                    android:descendantFocusability="blocksDescendants"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
                     android:padding="@dimen/comm_padding">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="后台抢红包"
-                        android:textColor="@color/color_text_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="免责声明"
+                        android:textColor="@color/color_text_title"
                         android:textSize="@dimen/dimen_text_content" />
-
-                    <CheckBox
-                        android:id="@+id/mCbSP"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/selector_switch_bg"
-                        android:button="@null"
-                        android:checked="false" />
-                </LinearLayout>
-
-                <include layout="@layout/include_line_view" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:layout_marginTop="@dimen/comm_margin"
-                    android:background="@color/color_line" />
-                <!-- 自动回复-->
-                <LinearLayout
-                    android:id="@+id/mLayoutAutoAnswer"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/selector_white_press"
-                    android:descendantFocusability="blocksDescendants"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/comm_padding">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="自动回复"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hb_rules"
                         android:textColor="@color/color_text_gray"
-                        android:textSize="@dimen/dimen_text_content" />
-
-                    <CheckBox
-                        android:id="@+id/mCbAutoAanswer"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/selector_switch_bg"
-                        android:button="@null"
-                        android:checked="false" />
-                </LinearLayout>
-
-                <include layout="@layout/include_line_view" />
-                <!--回复抢到的钱数 -->
-                <LinearLayout
-                    android:id="@+id/mLayoutAnswerMoeny"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/selector_white_press"
-                    android:descendantFocusability="blocksDescendants"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/comm_padding">
+                        android:textSize="@dimen/dimen_text_ignore" />
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="回复抢到的钱数"
-                        android:textColor="@color/color_text_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/comm_margin"
+                        android:text="使用步骤"
+                        android:textColor="@color/color_text_title"
                         android:textSize="@dimen/dimen_text_content" />
-
-                    <CheckBox
-                        android:id="@+id/mCBAnswerMoeny"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/selector_switch_bg"
-                        android:button="@null"
-                        android:checked="false" />
-                </LinearLayout>
-
-                <include layout="@layout/include_line_view" />
-                <!-- @发红包的人-->
-                <LinearLayout
-                    android:id="@+id/mLayoutOthers"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/selector_white_press"
-                    android:descendantFocusability="blocksDescendants"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/comm_padding">
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="\@发红包的人"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hb_settingone"
                         android:textColor="@color/color_text_gray"
-                        android:textSize="@dimen/dimen_text_content" />
+                        android:textSize="@dimen/dimen_text_ignore" />
 
-                    <CheckBox
-                        android:id="@+id/mCbOthers"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/selector_switch_bg"
-                        android:button="@null"
-                        android:checked="false" />
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
 
-                <include layout="@layout/include_line_view" />
-                <!-- 自定义-->
-                <LinearLayout
-                    android:id="@+id/mLayoutDIY"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/selector_white_press"
-                    android:descendantFocusability="blocksDescendants"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/comm_padding">
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/icon_hb_setting11" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/icon_hb_setting12" />
+                    </LinearLayout>
 
                     <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="DIY回复"
-                        android:textColor="@color/color_text_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/comm_margin"
+                        android:text="微信客户端注意事项"
+                        android:textColor="@color/color_text_title"
                         android:textSize="@dimen/dimen_text_content" />
 
-                    <CheckBox
-                        android:id="@+id/mCbDIY"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/selector_switch_bg"
-                        android:button="@null"
-                        android:checked="false" />
-                </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hb_settingwxone"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_ignore" />
 
-                <include layout="@layout/include_line_view" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/wechat_setting_a" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/wechat_setting_b" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hb_settingwxtwo"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_ignore" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="20dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/wechat_setting_a" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_weight="1"
+                            android:adjustViewBounds="true"
+                            android:maxHeight="500dp"
+                            android:maxWidth="500dp"
+                            android:src="@mipmap/wechat_setting_b" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

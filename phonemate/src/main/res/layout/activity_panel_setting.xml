@@ -66,6 +66,15 @@
                     android:text="背景"
                     android:textColor="@color/color_white"
                     android:textSize="@dimen/dimen_text_content" />
+                <TextView
+                    android:id="@+id/mTvFloatView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="悬浮窗"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/dimen_text_content" />
             </LinearLayout>
 
             <FrameLayout

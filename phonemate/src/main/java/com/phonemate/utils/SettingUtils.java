@@ -2,6 +2,9 @@ package com.phonemate.utils;
 
 import android.content.Context;
 
+import com.phonemate.activity.applock.AppLock;
+import com.phonemate.global.GlobalUtils;
+
 /**
  * 
  * 设置类
@@ -170,6 +173,16 @@ public class SettingUtils {
 		PreferenceUtils.getInstance(context).saveString(KEY_APP_LOCK_PASSWORD, value);
 	}
 
+	//应用锁类型
+	public final static String KEY_APP_LOCK_TYPE="key_app_lock_password";
+	public static int getAppLockType(Context context){
+		return PreferenceUtils.getInstance(context).getInt(KEY_APP_LOCK_TYPE, AppLock.APP_LOCK_TYPE_NUM);
+	}
+	public static void setAppLockType(Context context,int value){
+		SetIsSettingAppLockPassword(context,true);
+		PreferenceUtils.getInstance(context).saveInt(KEY_APP_LOCK_TYPE, value);
+	}
+
 
 	//是否开启了应用锁界面
 	public final static String KEY_OPEN_APP_LOCK_ACTIVITY="key_is_open_lock_activity";
@@ -189,5 +202,53 @@ public class SettingUtils {
 		PreferenceUtils.getInstance(context).saveLong(KEY_GET_WEATHER_TIME, value);
 	}
 
+
+	//start===红包设置界面===
+	//是否自动抢红包
+	public final static String  KEY_HB_ISOPEN="key_hb_isopen";
+	public static boolean HBIsOpen(Context context){
+		return PreferenceUtils.getInstance(context).getBoolean(KEY_HB_ISOPEN, false);
+	}
+	public static synchronized  void setHbIspen(Context context,boolean value){
+		PreferenceUtils.getInstance(context).saveBoolean(KEY_HB_ISOPEN, value);
+	}
+
+	//后台抢红包
+	public final static String  KEY_HB_BACKGROUND="key_hb_background";
+	public static boolean isHBBg(Context context){
+		return PreferenceUtils.getInstance(context).getBoolean(KEY_HB_BACKGROUND, false);
+	}
+	public static synchronized  void setisHBBg(Context context,boolean value){
+		PreferenceUtils.getInstance(context).saveBoolean(KEY_HB_BACKGROUND, value);
+	}
+
+
+	//自动回复
+	public final static String  KEY_HB_AO_AS="key_hb_ao_as";
+	public static boolean isAutoAnswer(Context context){
+		return PreferenceUtils.getInstance(context).getBoolean(KEY_HB_AO_AS, false);
+	}
+	public static synchronized  void setisAutoAnswer(Context context,boolean value){
+		PreferenceUtils.getInstance(context).saveBoolean(KEY_HB_AO_AS, value);
+	}
+
+	//自动回复类型
+	public final static String  KEY_HB_AO_AS_TYPE="key_hb_ao_as_type";
+	public static int isAutoAnswerType(Context context){
+		return PreferenceUtils.getInstance(context).getInt(KEY_HB_AO_AS_TYPE, GlobalUtils.AUTO_ANSWER_TYPE_MONEY);
+	}
+	public static synchronized  void setisAutoAnswerType(Context context,int value){
+		PreferenceUtils.getInstance(context).saveInt(KEY_HB_AO_AS_TYPE, value);
+	}
+
+	//自动回复DIY内容
+	public final static String  KEY_HB_AO_AS_CONNTENT="key_hb_ao_as_content";
+	public static String getAutoAnswerContent(Context context){
+		return PreferenceUtils.getInstance(context).getString(KEY_HB_AO_AS_CONNTENT, GlobalUtils.AUTO_ANSWER_TYPE_DIY_CONTENT);
+	}
+	public static synchronized  void setAutoAnswerContent(Context context,String value){
+		PreferenceUtils.getInstance(context).saveString(KEY_HB_AO_AS_CONNTENT, value);
+	}
+	//=======end =======
 
 }

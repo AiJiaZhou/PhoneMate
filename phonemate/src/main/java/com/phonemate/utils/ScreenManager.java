@@ -12,6 +12,8 @@ package com.phonemate.utils;
 
 import android.app.Activity;
 
+import com.rxx.fast.utils.LUtils;
+
 import java.util.Stack;
 
 public class ScreenManager {
@@ -42,9 +44,8 @@ public class ScreenManager {
 
     public void popActivity(Activity activity) {
         if (activity != null) {
-            activity.finish();
             activityStack.remove(activity);
-            activity = null;
+            activity.finish();
         }
     }
 
@@ -77,12 +78,18 @@ public class ScreenManager {
         }
     }
 
-    public void popAllActivity() {
+    public  void popAllActivity() {
         while (true) {
             Activity activity = currentActivity();
             if (activity == null) {
                 break;
             }
+
+            if(activity.getClass().getName().endsWith("LockActivity")){
+                LUtils.i(activity.getClass().getName());
+                break ;
+            }
+
             popActivity(activity);
         }
     }

@@ -116,14 +116,14 @@
                 </LinearLayout>
 
                 <LinearLayout
-                     android:visibility="gone"
                     android:id="@+id/layout_advice"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/selector_white_press"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="@dimen/comm_padding">
+                    android:padding="@dimen/comm_padding"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="0dp"

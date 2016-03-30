@@ -1,5 +1,8 @@
 package com.phonemate.lockscreent;
 
+import android.content.Context;
+import android.view.WindowManager;
+
 /**
  * 项目名称：PhoneMate
  * 类描述：
@@ -9,5 +12,27 @@ package com.phonemate.lockscreent;
  * 修改时间：15/12/11 16:03
  * 修改备注：
  */
-public class LockScreen {
+public abstract  class LockScreen {
+
+    protected Context mContext;
+
+    protected WindowManager mWindowManager;
+
+    protected   WindowManager.LayoutParams mLayoutParams;
+
+    public LockScreen(Context context){
+        mContext=context;
+    }
+
+
+    /**解锁*/
+    public abstract void unLock();
+
+    /**锁屏*/
+    public abstract void lock();
+
+    /**更新界面*/
+    public  abstract void  updateView();
+
+
 }

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.phonemate.R;
 import com.phonemate.adapter.FragmentAdapter;
 import com.phonemate.base.BaseFragmentActivity;
+import com.phonemate.fragment.FloatViewSettingFragment;
 import com.phonemate.fragment.PanelSettingBgFragment;
 import com.phonemate.fragment.PanelSettingControlFragment;
 import com.phonemate.fragment.PanelSettingDoubleClickFragment;
@@ -58,6 +59,10 @@ public class PanelSettingActivity extends BaseFragmentActivity
     @ViewInject(id = R.id.mTvDoubleClick,click = true)
     TextView mTvDoubleClick;
 
+    @ViewInject(id = R.id.mTvFloatView,click = true)
+    TextView mTvFloatView;
+
+
     @ViewInject(id = R.id.mViewPager)
     ViewPager mViewPager;
 
@@ -86,7 +91,7 @@ public class PanelSettingActivity extends BaseFragmentActivity
         mTvRight.setText("");
 
         ViewGroup.LayoutParams layoutParams=mMoveView.getLayoutParams();
-        layoutParams.width= WindowUtils.getWIndowWidth(mActivity)/4;
+        layoutParams.width= WindowUtils.getWIndowWidth(mActivity)/5;
         layoutParams.height=-1;
         mLastView=mTvControl;
 
@@ -100,6 +105,7 @@ public class PanelSettingActivity extends BaseFragmentActivity
         mFragmentList.add(new PanelSettingLongClickFragment());
         mFragmentList.add(new PanelSettingDoubleClickFragment());
         mFragmentList.add(new PanelSettingBgFragment());
+        mFragmentList.add(new FloatViewSettingFragment());
 
         mAdapter=new FragmentAdapter(getSupportFragmentManager(),mFragmentList);
         mViewPager.setAdapter(mAdapter);
@@ -142,6 +148,14 @@ public class PanelSettingActivity extends BaseFragmentActivity
             if(mViewPager.getCurrentItem()!=2){
                 mViewPager.setCurrentItem(2);
             }
+        }else if(v==mTvFloatView){
+            mLastView.setTextColor(mColorOff);
+            ViewUtils.cursorMoveBtnItemAnimation(mLastView,mTvFloatView,mMoveView);
+            mLastView=mTvFloatView;
+            mLastView.setTextColor(mColorOn);
+            if(mViewPager.getCurrentItem()!=4){
+                mViewPager.setCurrentItem(4);
+            }
         }
     }
 
@@ -164,6 +178,9 @@ public class PanelSettingActivity extends BaseFragmentActivity
                 break;
             case 3:
                 onClick(mTvBg);
+                break;
+            case 4:
+                onClick(mTvFloatView);
                 break;
         }
     }

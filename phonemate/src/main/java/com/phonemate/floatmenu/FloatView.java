@@ -218,7 +218,7 @@ public class FloatView implements View.OnTouchListener {
         mBgDrawable.setCornerRadius(ResUtils.dp2px(mRadius * mRadiusZoom, mContext));
         //描边
         mBgDrawable.setStroke(0, mDefaultColor);
-        mFrameLayout.setBackground(mBgDrawable);
+        ResUtils.setBackDrawable(mFrameLayout,mBgDrawable);
         //尺寸
         mLayoutParams.width = (int) ResUtils.dp2px(mSize * mSizeZoom, mContext);
         mLayoutParams.height = mLayoutParams.width;

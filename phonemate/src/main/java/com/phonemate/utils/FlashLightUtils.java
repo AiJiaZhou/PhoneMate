@@ -21,7 +21,12 @@ public class FlashLightUtils {
         if (mCamera == null) {
             return false;
         }
-        Camera.Parameters parameters = mCamera.getParameters();
+        Camera.Parameters parameters=null;
+        try {
+             parameters = mCamera.getParameters();
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
         if (parameters == null) {
             return false;
         }

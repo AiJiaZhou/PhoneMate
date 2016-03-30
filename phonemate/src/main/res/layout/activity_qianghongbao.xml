@@ -14,206 +14,209 @@
 
         <include layout="@layout/include_titlemenu_view" />
 
-
         <ScrollView
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fillViewport="false"
-            android:scrollbars="none">
+            android:background="@color/color_trans">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="30dp"
-                    android:src="@mipmap/icon_app" />
-
-                <TextView
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/comm_margin"
-                    android:gravity="center"
-                    android:text="@string/app_name"
-                    android:textColor="@color/color_text_title"
-                    android:textSize="@dimen/dimen_text_content" />
-
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/comm_margin"
+                    android:background="@color/color_line" />
+                <!-- 是否自动抢红包-->
                 <LinearLayout
+                    android:id="@+id/mLayoutHB"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/iv_appname"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/color_white"
-                    android:orientation="vertical">
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:background="@color/color_line" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:text="自动抢红包"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:text="版本号"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tv_verson"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:layout_marginLeft="10dp"
-                        android:background="@color/color_line" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_page"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:text="官网"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tv_url"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/icon_detail" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:layout_marginLeft="10dp"
-                        android:background="@color/color_line"
-                        android:visibility="gone" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_wx"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="10dp"
-                        android:visibility="gone">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:text="微信客服"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tv_wx"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:text=""
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/icon_detail" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:layout_marginLeft="10dp"
-                        android:background="@color/color_line" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_qq"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:text="QQ群"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tv_qq"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center_vertical"
-                            android:text="171400283"
-                            android:textColor="@color/color_text_title"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/icon_detail" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1px"
-                        android:background="@color/color_line" />
+                    <CheckBox
+                        android:id="@+id/mCbHB"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
                 </LinearLayout>
+
+                <!--<include layout="@layout/include_line_view" />-->
+                <!-- 锁屏抢红包-->
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/mLayoutLS"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="后台抢红包"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/mCbSP"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/comm_margin"
+                    android:background="@color/color_line" />
+                <!-- 自动回复-->
+                <LinearLayout
+                    android:id="@+id/mLayoutAutoAnswer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="自动回复"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/mCbAutoAanswer"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+                <!--回复抢到的钱数 -->
+                <LinearLayout
+                    android:id="@+id/mLayoutAnswerMoeny"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="回复抢到的钱数"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/mCBAnswerMoeny"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+                <!-- @发红包的人-->
+                <LinearLayout
+                    android:id="@+id/mLayoutOthers"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="\@发红包的人"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/mCbOthers"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
+                <!-- 自定义-->
+                <LinearLayout
+                    android:id="@+id/mLayoutDIY"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/selector_white_press"
+                    android:descendantFocusability="blocksDescendants"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/comm_padding">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="DIY回复"
+                        android:textColor="@color/color_text_gray"
+                        android:textSize="@dimen/dimen_text_content" />
+
+                    <CheckBox
+                        android:id="@+id/mCbDIY"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/selector_switch_bg"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line_view" />
             </LinearLayout>
         </ScrollView>
-
-        <TextView
-            android:id="@+id/tv_descript"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/comm_margin"
-            android:layout_weight="0"
-            android:gravity="center"
-            android:text="Copyright©2015 手机伴侣.All Rights Reserved"
-            android:textColor="@color/color_text_title"
-            android:textSize="12sp" />
     </LinearLayout>
 </FrameLayout>

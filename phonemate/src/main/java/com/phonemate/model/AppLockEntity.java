@@ -89,5 +89,6 @@ public class AppLockEntity {
 
         return !(packName != null ? !packName.equals(that.packName) : that.packName != null);
 
+
     }
 }

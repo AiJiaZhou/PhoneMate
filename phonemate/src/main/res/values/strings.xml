@@ -1,22 +1,26 @@
 <resources>
-    <string name="app_name">PhoneMate</string>
+    <string name="app_name">手机伴侣</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
-    <string name="coreservice_notification_title">PhoneMate正在陪伴您</string>
+    <string name="coreservice_notification_title">手机伴侣正在陪伴您</string>
     <string name="coreservice_notification_message">触摸了解详细或者停止应用</string>
 
-    <string name="lock_screen_notice">PhoneMate需要改权限来锁屏,不会危害您的手机设备.\n如果是第一次允许权限,激活后请再次点击锁屏.</string>
+    <string name="lock_screen_notice">手机伴侣需要改权限来锁屏,不会危害您的手机设备.\n如果是第一次允许权限,激活后请再次点击锁屏.</string>
 `
 
     <string name="title_about_us">关于我们</string>
     <string name="_return">返回</string>
 
     <string name="init_setting_floatview_title">开启显示悬浮窗</string>
-    <string name="init_setting_floatview_detail">确保PhoneMate能正常运行</string>
+    <string name="init_setting_floatview_detail">确保手机伴侣能正常运行</string>
     <string name="init_setting_self_start_title">设置自启动</string>
-    <string name="init_setting_self_start_detail">确保PhoneMate能守护手机</string>
+    <string name="init_setting_self_start_detail">确保手机伴侣能守护手机</string>
+    <string name="hb_settingone"><![CDATA[1.必选应用设置\n我们打开抢红包,点击上部<为了抢红包...>字样进入辅助功能设置->找到手机伴侣,点击开启,然后返回.完成后回到界面有<手机伴侣正在为您抢红包>字样即设置成功.如下所示]]></string>
+    <string name="hb_rules">本软件仅供娱乐消遣使用,完全模拟人工操作,抢红包的速度取决于手机性能和网速,不涉及任何第三方接口,无病毒,不收集任何信息,切勿使用本软件参与赌博活动.一切因使用本软件造成的任何后果,本软件概不负责,亦不承担任何法律责任.</string>
+    <string name="hb_settingwxone"><![CDATA[1.打开微信,在<设置--消息提醒>里面,前两个<接受新消息通知>和<通知显示消息详情>按钮开启.(必选).如下所示]]></string>
+    <string name="hb_settingwxtwo"><![CDATA[2.在任意一个群组,点击右上角,打开<聊天消息>模式,下拉找到<消息免打扰>选项,勾选关闭(必选).如下所示]]></string>
 </resources>

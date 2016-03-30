@@ -12,6 +12,7 @@ import com.phonemate.base.BaseActivity;
 import com.phonemate.utils.MessageUtils;
 import com.phonemate.utils.SettingUtils;
 import com.phonemate.widget.GestureLockView;
+import com.rxx.fast.utils.LUtils;
 import com.rxx.fast.view.ViewInject;
 
 /**
@@ -43,7 +44,8 @@ public class AppGestureLockActivity extends BaseActivity implements  GestureLock
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_applock);
+        setContentView(R.layout.activity_app_gesture_lock);
+        LUtils.i("AppGestureLockActivity>onCreate");
     }
 
     @Override
@@ -78,6 +80,10 @@ public class AppGestureLockActivity extends BaseActivity implements  GestureLock
             home.addCategory(Intent.CATEGORY_HOME);
             mActivity.startActivity(home);
         }
+        LUtils.i("AppGestureLockActivity>onPause");
+        mActivity.finish();
+
+
     }
 
     @Override

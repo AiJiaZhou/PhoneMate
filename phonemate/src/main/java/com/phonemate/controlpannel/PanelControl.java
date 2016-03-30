@@ -1,10 +1,8 @@
 package com.phonemate.controlpannel;
 
-import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
-import android.os.Build;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -199,7 +197,6 @@ public class PanelControl extends DialogHolder implements AdapterView.OnItemClic
         return dialog;
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void updateView(){
         mRadiusZoom= SettingUtils.getPanelRadius(mActivity);
         mSizeZoom=SettingUtils.getPanelSize(mActivity);
@@ -212,7 +209,7 @@ public class PanelControl extends DialogHolder implements AdapterView.OnItemClic
         mBgDrawable.setCornerRadius(ResUtils.dp2px(mRadius * mRadiusZoom, mActivity));
         //描边
         mBgDrawable.setStroke(0, mDefaultColor);
-        mLayoutFrameLayout.setBackground(mBgDrawable);
+        ResUtils.setBackDrawable(mLayoutFrameLayout,mBgDrawable);
         //尺寸
         mDialogLayoutParams.width= (int) (mSize*mSizeZoom);
         mDialogLayoutParams.height=mDialogLayoutParams.width;

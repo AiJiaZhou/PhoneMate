@@ -10,11 +10,17 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Application" />
             <option value="$PROJECT_DIR$/ImageLoader" />
-            <option value="$PROJECT_DIR$/RuntimePermissions" />
             <option value="$PROJECT_DIR$/fast" />
-            <option value="$PROJECT_DIR$/gestureBuilder" />
+            <option value="$PROJECT_DIR$/phonemate" />
+            <option value="$PROJECT_DIR$/volley" />
+          </set>
+        </option>
+        <option name="myModules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/ImageLoader" />
+            <option value="$PROJECT_DIR$/fast" />
             <option value="$PROJECT_DIR$/phonemate" />
             <option value="$PROJECT_DIR$/volley" />
           </set>

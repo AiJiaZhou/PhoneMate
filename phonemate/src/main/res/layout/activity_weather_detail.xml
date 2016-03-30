@@ -8,7 +8,7 @@
         android:id="@+id/mLayoutSetting"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/color_light_green"
+        android:background="@mipmap/icon_weather_bg"
         android:orientation="vertical">
 
         <include layout="@layout/include_title_view" />

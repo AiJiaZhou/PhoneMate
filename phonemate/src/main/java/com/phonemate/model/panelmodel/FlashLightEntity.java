@@ -36,9 +36,14 @@ public class FlashLightEntity extends PanelMenuEntity {
         }
         if (FlashLightUtils.isOpen(camera)) {
             FlashLightUtils.turnLightOff(camera);
+            if(camera!=null) {
+                camera.release();
+                camera = null;
+            }
         } else {
             if (FlashLightUtils.hasFlashLight(context)) {
                 FlashLightUtils.turnLightOn(camera);//
+
             } else {
                 MessageUtils.alertMessageCENTER("开启手电筒失败，您的设备不支持。");
             }
@@ -64,6 +69,7 @@ public class FlashLightEntity extends PanelMenuEntity {
             menuIcon= ResUtils.getDrawable(context,R.mipmap.icon_panelmenu_flashlight_on);
         }else{
             menuIcon= ResUtils.getDrawable(context,R.mipmap.icon_panelmenu_flashlight_off);
+
         }
     }
 

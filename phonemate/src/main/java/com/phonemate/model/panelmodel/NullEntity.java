@@ -1,10 +1,12 @@
 package com.phonemate.model.panelmodel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 
 import com.phonemate.R;
+import com.phonemate.activity.PanelSettingActivity;
 import com.phonemate.utils.ResUtils;
 
 /**
@@ -29,7 +31,9 @@ public class NullEntity extends PanelMenuEntity{
 
     @Override
     public void onClick(AdapterView<?> parent, View view, int position, long id) {
-
+        Intent intent=new Intent(context, PanelSettingActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override

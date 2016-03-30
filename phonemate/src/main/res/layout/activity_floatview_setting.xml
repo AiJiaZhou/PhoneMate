@@ -9,11 +9,6 @@
         android:layout_height="match_parent"
         android:background="@color/color_white"
         android:orientation="vertical">
-
-        <include layout="@layout/include_title_view" />
-
-        <include layout="@layout/include_titlemenu_view" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -154,12 +149,13 @@
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/mRecyclerView"
-                android:background="@color/color_white"
-                android:layout_width="match_parent"
-                android:layout_weight="0"
-                android:layout_height="40dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="0"
+            android:background="@color/color_white" />
     </LinearLayout>
 
 </FrameLayout>

@@ -9,5 +9,13 @@ package com.phonemate.activity.applock;
  * 修改时间：15/12/11 17:48
  * 修改备注：
  */
-public class AppLock {
+public interface AppLock {
+    /**
+     * 数字
+     */
+    int APP_LOCK_TYPE_NUM = 0;
+    /**
+     * 手势
+     */
+    int APP_LOCK_TYPE_GESTURE = 1;
 }

@@ -91,6 +91,7 @@ public abstract  class PanelMenuEntity {
                 SystemSettingEntity.INSERT_VALUES,
                 VibrateEntity.INSERT_VALUES,
                 WifiMenuEntity.INSERT_VALUES,
+                ScreenCapture.INSERT_VALUES,
         };
         db.beginTransaction();
         int i=0;

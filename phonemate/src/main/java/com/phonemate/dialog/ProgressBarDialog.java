@@ -17,7 +17,7 @@ import com.rxx.fast.dialog.DialogUtils;
  * 修改时间：15/11/30 22:14
  * 修改备注：
  */
-public class ProgressBarDialog  extends DialogHolder{
+public class ProgressBarDialog extends DialogHolder {
 
     public ProgressBarDialog(Context mActivity) {
         super(mActivity, R.layout.dialog_progress_view);
@@ -25,20 +25,20 @@ public class ProgressBarDialog  extends DialogHolder{
 
     @Override
     public Dialog createDialog() {
-        return   DialogUtils.createDialogCenter(mActivity, mRootView, R.style.Select_Progress_Dialog, Gravity.CENTER, -1, -1, true);
+        return DialogUtils.createDialogCenter(mActivity, mRootView, R.style.Select_Progress_Dialog, Gravity.CENTER, -1, -1, true);
     }
 
-    public void show(String text){
+    public void show(String text) {
         mDialog.show();
     }
 
-    public boolean dialogIsShow(){
+    public boolean dialogIsShow() {
         return mDialog.isShowing();
     }
 
-    public void dissmissProgressDialog(){
-        if(mDialog!=null&&mDialog.isShowing()){
-            mDialog.dismiss();;
+    public void dissmissProgressDialog() {
+        if (mDialog != null && mDialog.isShowing()) {
+            mDialog.dismiss();
         }
     }
 }

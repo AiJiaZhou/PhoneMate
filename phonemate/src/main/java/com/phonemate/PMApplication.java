@@ -9,6 +9,7 @@ import com.phonemate.utils.MessageUtils;
 import com.phonemate.utils.ScreenManager;
 import com.phonemate.utils.SettingUtils;
 import com.rxx.fast.FastDB;
+import com.rxx.fast.utils.LUtils;
 
 /**
  * 项目名称：PhoneMate
@@ -27,6 +28,7 @@ public class PMApplication extends Application{
         super.onCreate();
         fastDB =FastDB.create(this, null);
 
+        LUtils.isDebug=true;
         MessageUtils.init(this);
         //第一次执行执行插入语句
         if(SettingUtils.isFirstUse(this)) {
@@ -45,5 +47,4 @@ public class PMApplication extends Application{
 
         screenManager=ScreenManager.getScreenManager();
     }
-
 }

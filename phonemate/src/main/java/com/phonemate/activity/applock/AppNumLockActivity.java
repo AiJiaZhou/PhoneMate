@@ -9,9 +9,7 @@ import android.widget.TextView;
 
 import com.phonemate.R;
 import com.phonemate.base.BaseActivity;
-import com.phonemate.utils.MessageUtils;
 import com.phonemate.utils.SettingUtils;
-import com.phonemate.widget.GestureLockView;
 import com.rxx.fast.view.ViewInject;
 
 /**
@@ -23,7 +21,7 @@ import com.rxx.fast.view.ViewInject;
  * 修改时间：15/12/1 10:28
  * 修改备注：
  */
-public class AppNumLockActivity extends BaseActivity implements  GestureLockView.OnGestureFinishListener{
+public class AppNumLockActivity extends BaseActivity {
 
     private String appName;
     private Drawable appDrawable;
@@ -35,23 +33,20 @@ public class AppNumLockActivity extends BaseActivity implements  GestureLockView
     @ViewInject(id = R.id.mTvPasswordTitle)
     private TextView mTvPasswordTitle;
 
-    @ViewInject(id = R.id.mGesture)
-    private GestureLockView mGesture;
-
-    private boolean isGoLunch=true;
+    private boolean isGoLunch = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_applock);
+        setContentView(R.layout.activity_app_num_lock);
     }
 
     @Override
     public void bingViewFinish() {
-        mTitleColor= R.color.color_app_lock_bg;
-        appPackage=getIntent().getStringExtra("packName");
+        mTitleColor = R.color.color_app_lock_bg;
+        appPackage = getIntent().getStringExtra("packName");
         try {
-            appDrawable=mActivity.getPackageManager().getApplicationIcon(appPackage);
+            appDrawable = mActivity.getPackageManager().getApplicationIcon(appPackage);
             appName = mActivity.getPackageManager().getApplicationLabel
                     (mActivity.getPackageManager().getApplicationInfo(appPackage,
                             PackageManager.GET_META_DATA)).toString();
@@ -60,7 +55,6 @@ public class AppNumLockActivity extends BaseActivity implements  GestureLockView
         }
         mTvPasswordTitle.setText(appName);
         mIvApp.setImageDrawable(appDrawable);
-        mGesture.setOnGestureFinishListener(this);
     }
 
     @Override
@@ -73,20 +67,12 @@ public class AppNumLockActivity extends BaseActivity implements  GestureLockView
     protected void onPause() {
         super.onPause();
         SettingUtils.setIsOpenAppLockActiviy(mActivity, false);
-        if(isGoLunch) {
+        if (isGoLunch) {
             Intent home = new Intent(Intent.ACTION_MAIN);
             home.addCategory(Intent.CATEGORY_HOME);
             mActivity.startActivity(home);
         }
     }
-
-    @Override
-    public void OnGestureFinish(String key) {
-        if(key.equals(SettingUtils.getAppLockPassword(mActivity))){
-            isGoLunch=false;
-            mActivity.finish();
-        }else{
-            MessageUtils. alertMessageCENTER("密码错误");
-        }
-    }
+//    isGoLunch = false;
+//    mActivity.finish();
 }

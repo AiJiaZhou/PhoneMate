@@ -22,13 +22,14 @@ import com.phonemate.R;
 import com.phonemate.Receiver.AppLockReceiver;
 import com.phonemate.Receiver.UpdateFloatViewReceiver;
 import com.phonemate.Receiver.UpdatePanelReceiver;
-import com.phonemate.activity.AppLockActivity;
+import com.phonemate.activity.applock.AppGestureLockActivity;
 import com.phonemate.controlpannel.FloatViewClickListener;
 import com.phonemate.floatmenu.FloatView;
 import com.phonemate.global.GlobalUtils;
 import com.phonemate.model.AppLockEntity;
 import com.phonemate.model.WeatherModel;
 import com.phonemate.utils.AppTaskUtils;
+import com.phonemate.utils.IntentUtils;
 import com.phonemate.utils.NotificationUtils;
 import com.phonemate.utils.SettingUtils;
 import com.rxx.fast.FastDB;
@@ -339,6 +340,7 @@ public class CoreService extends Service implements UpdateFloatViewReceiver.Upda
                                 .getPackageName();
                          className = mActivityManager.getRunningTasks(1).get(0).topActivity
                                 .getClassName();
+                        LUtils.i("当前栈顶:",packname+"\n"+className);
                     }
 
                 } else {
@@ -361,13 +363,15 @@ public class CoreService extends Service implements UpdateFloatViewReceiver.Upda
                    return ;
                 }
 
-                if(packname.endsWith("launcher") && mApplication.screenManager.getSize()>0){
+
+                if((className.contains("launcher") || className.contains("Launcher")
+                        ||  packname.contains("Launcher")
+                        ||  packname.contains("Launcher")) && mApplication.screenManager.getSize()>0){
+
                     mApplication.screenManager.popAllActivity();
                 }
-                LUtils.i("当前栈顶"+packname);
-                LUtils.i("当前栈顶"+className);
                 //如果当前栈顶的是解锁界面不采取任何操作
-                if (AppLockActivity.class.getName().equals(className)) {
+                if (AppGestureLockActivity.class.getName().equals(className)) {
                     return;
                 }
                 //当前栈顶应用没有改变
@@ -378,10 +382,7 @@ public class CoreService extends Service implements UpdateFloatViewReceiver.Upda
                 mUnlockPack = packname;
                 for (int i = 0; i < mList.size(); i++) {
                     if (mList.get(i).getPackName().equals(packname)) {
-                        Intent intent = new Intent(CoreService.this, AppLockActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.putExtra("packName", packname);
-                        CoreService.this.startActivity(intent);
+                        IntentUtils.startAppLockScreen(mService.getApplicationContext(),packname);
                     }
                 }
             }

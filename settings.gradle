@@ -1,2 +1,1 @@
-include ':phonemate', ':fast', ':ImageLoader', ':volley', ':Application', ':RuntimePermissions'
-include ':gestureBuilder'
+include ':phonemate', ':fast', ':ImageLoader', ':volley'

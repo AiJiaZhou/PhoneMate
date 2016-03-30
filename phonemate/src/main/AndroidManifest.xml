@@ -106,7 +106,15 @@
             android:windowSoftInputMode="stateHidden|adjustPan"/>
 
         <activity
-            android:name=".activity.FloatViewSettingActivity"
+            android:excludeFromRecents="true"
+            android:name=".activity.applock.AppNumLockActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity
+            android:name=".activity.QingHongBaoSettingActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
@@ -141,8 +149,17 @@
             android:windowSoftInputMode="stateHidden|adjustPan"/>
 
         <activity
-            android:name=".activity.AppLockActivity"
+            android:name=".activity.QHBActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity
+            android:excludeFromRecents="true"
+            android:name=".activity.applock.AppGestureLockActivity"
             android:exported="true"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustPan"/>
@@ -154,6 +171,13 @@
             android:windowSoftInputMode="stateHidden|adjustPan"/>
         <activity
             android:name=".activity.WeatherDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustPan"/>
+
+        <activity
+            android:name=".activity.HongBaoRules"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar"
@@ -226,5 +250,7 @@
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
+
     </application>
 </manifest>
