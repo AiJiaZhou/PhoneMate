@@ -12,10 +12,11 @@
 
 交流 QQ 群：171400283
 
-![主页面：](http://git.oschina.net/uploads/images/2016/0310/160604_2f1dc69e_414444.png "悬浮菜单控制")
-![软件管理页面](http://git.oschina.net/uploads/images/2016/0310/160617_9ebf3fba_414444.png "apk管理和app管理")
-![应用锁设置界面](http://git.oschina.net/uploads/images/2016/0310/160629_c556a513_414444.png "需要加锁的应用管理")
-![悬浮菜单设置界面](http://git.oschina.net/uploads/images/2016/0310/160638_56c68036_414444.png "悬浮菜单设置")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0310/160652_0a4738a6_414444.png "在这里输入图片标题")
-![应用锁界面](http://git.oschina.net/uploads/images/2016/0310/160708_c5cf8b98_414444.jpeg "在这里输入图片标题")
-![抢红包界面](http://git.oschina.net/uploads/images/2016/0310/160744_946e7e28_414444.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154054_462525b3_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154109_449e940b_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154119_449d9f86_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154126_386df911_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154153_3bdd3af5_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154230_7f1e5744_414444.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0330/154303_0889bd67_414444.png "在这里输入图片标题")
+
